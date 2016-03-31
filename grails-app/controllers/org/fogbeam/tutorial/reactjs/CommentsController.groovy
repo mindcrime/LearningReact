@@ -7,8 +7,9 @@ class CommentsController
 	static
 	{
 		initialComments.add( """{"author": "Pete Hunt", "text":"This is one comment"}""");
-		initialComments.add( """{"author":"Jordan Walker", "text":"This is *another* comment"}""")
-		initialComments.add( """{"author":"Phillip Rhodes", "text":"Wake up, Neo" }""");	
+		initialComments.add( """{"author":"Jordan Walke", "text":"This is *another* comment"}""")
+		initialComments.add( """{"author":"Phillip Rhodes", "text":"Wake up, Neo" }""");
+		initialComments.add( """{"author":"Morpheus", "text":"Take the Red Pill" }""");	
 	}
 	
 	
@@ -20,6 +21,8 @@ class CommentsController
 		
 		// TODO: switch this out to use a Builder instead of building up
 		// this string by hand like this.
+		
+		println "How many comments? " + initialComments.size();
 		String commentsString = initialComments.join(",");
 		
 		render( text: "[" + commentsString +"]",
